@@ -119,10 +119,10 @@ class Controller {
             if (true) {
 
                 // Add the data to the session array
-                $f3->get('SESSION.order')->setCondiments($condiments);
+                $this->_f3->get('SESSION.order')->setCondiments($condiments);
 
                 // Send the user to the next form
-                $f3->reroute('summary');
+                $this->_f3->reroute('summary');
             }
             else {
                 // Temporary
@@ -132,7 +132,7 @@ class Controller {
         // Get the data from the model
         // add it to the F3 hive
         $condiments = DataLayer::GetCondiments();
-        $f3->set('condiments', $condiments);
+        $this->_f3->set('condiments', $condiments);
 
         // Render a view page
         $view = new Template();

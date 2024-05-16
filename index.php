@@ -45,7 +45,7 @@ $f3->route('GET|POST /order1', function() {
 });
 
 // Order2
-$f3->route('GET|POST /order2', function($f3) {
+$f3->route('GET|POST /order2', function() {
     $GLOBALS['con']->order2();
 });
 
